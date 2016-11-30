@@ -1,12 +1,15 @@
 def ls(argument: "*")
     if Dir.exist?(argument)
-        thing = Dir.glob (argument)
-        p thing
+        thing = Dir.entries (argument)
+        puts thing
+
     else
         # thing = Dir.glob ('*.rb')
         # p thing
         puts 'nil'
-    end
+
+    
+  end
 end
 
-ls(argument: ARGV.first)
+puts ls(argument: ARGV.first)
